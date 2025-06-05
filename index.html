@@ -11,11 +11,13 @@
 
  <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+  
 </style>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
 
-
+  
   <link rel="icon" type="image/x-icon" href="assets/foodtruck-icon-bw.png">
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
@@ -24,37 +26,64 @@
 <!------------- Head section with SEO ends ------------>
 
 <body>
-  
+
 <header class="sticky-header">
-  <div class="logo">
-    <img src="assets/meatmykitchen-logo.png" alt="Meat MyKitchen Logo">
-  </div>
-
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#features">Home</a></li>
-      <li><a href="#pricing">Our story</a></li>
-      <li><a href="#contact">Menu</a></li>
-    </ul>
-  </nav>
-
-  <div class="header-actions">
-    <a href="#signup" class="action-button">Book your event</a>
-    <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" class="facebook-link">
-      <i class="fab fa-facebook"></i>
-    </a>
-
-
-  </div>
-</header>
-
-
-
+    <div class="logo">
+      <a href="index.html">
+      <img src="assets/meatmykitchen-logo.png" alt="Meat MyKitchen Logo"></a>
+    </div>
+    <nav class="nav-links">
+      <a class="active" href="index.html">Home</a>
+      <a href="#ourstory">Our Story</a>
+      <a href="#menu">Menu</a>
+      <button class="action-button">Book your event</button>
+    </nav>
+    <div class="icons">
+      <a href="https://facebook.com/meatmykitchen" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://wa.me/27834032596" target="_blank"  aria-label="Phone">
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+  </header>
 
 <!---------------------- Hero section ---------------->
 
-      <main class="content-grid ">
-        <p>body text</p>
+      <main class="content-grid debug">
+        <section class="hero-banner">
+        <div class="hero-content">
+            <h1 class="hero-title">Your event's gourmet food solution</h1>
+
+            <div class="food-truck-container">
+               <img src="assets/meat-mykitchen-foodtruck-icon.png" alt="Food truck icon">
+            </div>
+
+            <div class="hamburger-menu">
+                <svg width="23" height="4" viewBox="0 0 23 4" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-line-1">
+                    <path d="M1.5 0.5C0.671573 0.5 0 1.17157 0 2C0 2.82843 0.671573 3.5 1.5 3.5V0.5ZM1.5 2V3.5H22.5V2V0.5H1.5V2Z" fill="black"/>
+                </svg>
+                <svg width="36" height="4" viewBox="0 0 36 4" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-line-2">
+                    <path d="M1.5 0.5C0.671573 0.5 0 1.17157 0 2C0 2.82843 0.671573 3.5 1.5 3.5V0.5ZM35.5 2V0.5H1.5V2V3.5H35.5V2Z" fill="black"/>
+                </svg>
+                <svg width="36" height="4" viewBox="0 0 36 4" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-line-3">
+                    <path d="M1.5 0.5C0.671573 0.5 0 1.17157 0 2C0 2.82843 0.671573 3.5 1.5 3.5V0.5ZM35.5 2V0.5H1.5V2V3.5H35.5V2Z" fill="black"/>
+                </svg>
+            </div>
+
+            <h2 class="hero-subtitle">fresh, local &amp; expertly crafted</h2>
+
+            <div class="cta-buttons">
+                <button class="cta-button primary">Book us</button>
+                <button class="cta-button secondary">Find out more</button>
+            </div>
+        </div>
+
+        <div class="hero-images">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5330156c0fb405a94ba445cd5e044e5681da79b?placeholderIfAbsent=true" alt="Food truck service" class="hero-image-1">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8d2c122771a70f34ecd9b3e6afeb3d696693d3f5?placeholderIfAbsent=true" alt="Food preparation" class="hero-image-2">
+        </div>
+    </section>
 
           
       </main>
