@@ -84,7 +84,19 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  z-index: -1;
+  z-index: -2;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4); 
+  z-index: -1; 
+  pointer-events: none; 
 }
 
 h1 {
@@ -169,7 +181,6 @@ h2 {
     }
 
 
-
 @media (max-width: 780px) {
   .grid-2-col, .grid-3-col {
     grid-template-columns: 1fr;
@@ -184,6 +195,20 @@ h2 {
     font-size: 1.8rem;
     margin: 1rem;
   } 
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .cta-buttons button,
+  .cta-buttons .action-button,
+  .cta-buttons .secondary-button {
+    width: 100%;
+    
+  }
+
 
 }
 
@@ -277,6 +302,8 @@ nav a.active {
   .nav-links {
     flex-direction: column;
     gap: 1rem;
+    align-items: stretch;
+    width: 100%;
   }
 
 }
@@ -351,10 +378,19 @@ nav a.active {
 
 
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
 
-  .hero-content-right img {
-    width: 100%;
-    height: auto; 
-  }
+  .hero-content-left {
+  
+  margin-top: 10rem;
+}
+
+}
+@media (max-width: 600px) {
+
+  .hero-content-left {
+  
+  margin-top: 18rem;
+}
+
 }
