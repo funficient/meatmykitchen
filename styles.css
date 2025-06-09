@@ -503,11 +503,15 @@ nav a.active {
 }
 
 @media (max-width: 880px) {
+   
   .customers {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     align-self: center;
-    
+    width: 80%;
+    margin: 2rem auto;
+    /* margin-top: 2rem;
+    margin-bottom: 2rem; */
   }
 
   .customer-logo {
@@ -545,8 +549,8 @@ nav a.active {
     align-items: flex-start;
     justify-content: left;
     padding: 2rem;
-    width: 70%;
-    max-width: 800px;
+    max-width: 70%;
+    /* max-width: 800px; */
 }
 
 .section-heading {
@@ -574,6 +578,68 @@ nav a.active {
 
 
 /* Mobile Styles */
+
+@media (max-width: 1370px) {
+  .services {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 2rem;  
+      
+  }
+.services .image-container {
+  padding: 0;
+  margin: 0;
+}
+.services-image {
+    max-width: 70%;
+    padding: 0;
+    margin: auto;
+  }
+  .services .image-container img {
+    max-height: 30vh;
+    width: 100vw;
+    
+  }
+
+  .services h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+
+}
+@media (max-width: 880px) {
+
+ 
+  .services {
+    width: 100%;
+    padding: 0;
+  }
+
+  .text-content-container {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+.services-image {
+    max-width: 100%;
+    padding: 0;
+    margin: auto;
+  }
+  .services .image-container img {
+    max-height: 50vh;
+    width: 100vw;
+    
+  }
+
+
+.services .cta-buttons {
+  flex-direction: column;
+  width: 100%;
+}
+}
+
 @media (max-width: 600px) {
   .image-container {
     padding: 1rem;
