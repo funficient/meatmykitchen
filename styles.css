@@ -822,66 +822,35 @@ nav a.active {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) { /* Tablet */
-  .menu-showcase-container {
-    padding: 30px 15px;
-    margin: 40px auto;
-  }
-
-
+@media (max-width: 1000px) { /* Tablet */
+ 
   .services-content-container {
-    gap: 20px;
+    gap: 1rem;
   }
   .food-image {
-    height: 450px; /* Adjust height */
+    height: 350px; 
   }
-  .image-style6, .image-style2 {
-    margin-bottom: 40px; /* Reduced gap */
-  }
-  .item-title-style7 {
-    font-size: 24px;
-    line-height: 1.3;
-  }
-  .item-description-style5 {
-    font-size: 16px;
-    line-height: 1.4;
-  }
+  
 }
 
 @media (max-width: 768px) { /* Mobile */
-  .menu-showcase-container {
-    margin: 30px auto;
-    padding: 20px 15px;
-  }
-
 
   .services-content-container {
     flex-direction: column;
     align-items: center;
-    gap: 40px; /* Vertical gap between stacked items */
+    gap: 1.5rem; 
   }
   .services-item {
     width: 90%;
-    max-width: 400px; /* Consistent max-width for stacked items */
+    max-width: 400px; 
   }
-  .services-item:nth-child(1),
-  .services-item:nth-child(2),
-  .services-item:nth-child(3) {
-     max-width: 400px; /* Override individual max-widths */
+
   }
   .food-image {
     height: auto; /* Allow natural height based on aspect ratio */
     aspect-ratio: 410 / 553; /* Maintain original aspect ratio */
   }
-  .image-style6, .image-style2, .image-style8 {
-    margin-bottom: 15px; /* Consistent margin for stacked items */
-  }
-  .item-title-style7 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-  .item-description-style5 {
-    font-size: 16px;
-  }
-}
+  
+
+
 
