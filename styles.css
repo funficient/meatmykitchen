@@ -451,38 +451,44 @@ nav a.active {
 /* Customers */
 
 .customers {
-  display: grid;
+  /* display: grid;
   align-self: center;
   grid-column: span;
-  /* width: calc(100% - 6rem); */
-  width: fit-content;
-  max-width: 1200px;
-  padding: 1rem;
+  width: 100vw;
+  padding: 1rem 20%;
   
-  border-radius: 1rem;
-  margin: 2rem auto;
   gap: 1rem;
 
   grid-auto-flow: row;
   grid-template-columns: repeat(auto-fit  , minmax(100px, max-content));
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   
   align-items: center;
   justify-items: space-between;
-  overflow: hidden;
+  overflow: none; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw; 
+    height: auto;
+    padding: 1rem 10%; 
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
 
 }
 
 .customer-logo {
   min-width: 100px;
   max-width: 6rem;
-  width: 100%;
-  object-fit: cover;
+  width: auto;
+  object-fit: contain;
+  margin: auto;
   display: block;
   overflow: hidden;
   
-  height: 100px;  
+  
 }
 
 .wide {
