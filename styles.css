@@ -828,68 +828,15 @@ nav a.active {
 /* Contact Us form */
 
 /*--------------------- Contact Section -----------------*/
-.contact-section {
-  padding: 100px 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 
-.contact-content {
-  display: flex;
-  align-items: center;
-  gap: 100px;
-}
 
-.contact-description {
-  color: #5d5d5d;
-  font-size: 23px;
-  font-weight: 500;
-  max-width: 550px;
-  line-height: 1.5;
-}
-
-.contact-details {
-  color: #fff;
-  margin: 0;
-  padding: 50px 50px;
-  border-radius: 20px;
-  background-color: #0f4761;
-}
-
-.contact-details p, .contact-details address {
-  margin: 0;
-  padding: 5px 0;
-}
-
-.contact-details-title {
-  font-size: 23px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.contact-info p {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.contact-info span {
-  font-weight: 700;
-}
-
-.address {
-  font-size: 20px;
-  margin-top: 20px;
-  font-style: normal;
-  line-height: 1.3;
-}
 
 /* Contact Form Section */
 .contact-form-section {
-  padding: 50px 250px;
+  padding: 3rem ;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
 }
 
 .contact-form {
@@ -899,49 +846,46 @@ nav a.active {
 
 .form-row {
   display: flex;
-  gap: 20px;
+  gap: 0.5rem;
   margin-bottom: 8px;
 }
 
 .form-input {
-  border: none;
-  border-radius: 5px;
-  padding: 15px 20px;
-  font-size: 17px;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
   width: 100%;
-  background-color: #f1f1f2;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
 }
 
 .form-textarea {
-  border: none;
-  border-radius: 5px;
-  padding: 15px;
-  font-size: 18px;
+  border: 2px solid #fff;;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 16px;
   width: 100%;
-  height: 150px;
+  height: 10rem;
   margin-top: 8px;
   resize: none;
-  background-color: #f1f1f2;
-}
-
-.submit-button {
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 16px 32px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-top: 13px;
-  cursor: pointer;
-  background-color: #0f4761;
 }
 
-@media (max-width: 991px)  {
-  .contact-content {
-    margin: 20px;
-  }
-  
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6); 
+    font-weight: 300;
 }
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  caret-color: var(--accent-color);
+}
+
+
+
 
 /* Footer */
 .footer {
@@ -954,18 +898,13 @@ nav a.active {
 	padding: 2rem 1.5rem;
 }
 
-
- 
-
 .footer-container {
-	width: calc(100% - 572px);
-	max-width: 94.94rem;
+	width: 100%;
+	max-width: 1200px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: var(--item-spacing-29-5);
 	flex-grow: 1;
-	padding: 0.62rem 0;
 }
 
 .footer-icon {
@@ -979,19 +918,18 @@ nav a.active {
 	text-align: center;
 	line-height: 1.5rem;
 	font-weight: 400;
+  margin-bottom: 2rem;
 }
 
-/*
-
-.container-container {
+ .container-container {
   display: block;
   width: 100%;
   height: fit-content;
 	position: relative;
-	
-	flex-grow: 1;
-	
-}
+	flex-grow: 1; 
+  margin: auto;
+  padding: 1.5rem;
+} 
 
 .footer-contact-section {
   display: flex;
@@ -1007,10 +945,31 @@ text-align: left;
   margin-left: 0 !important;
 }
 
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.7rem;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  width: 1rem;
+}
 
 
 
 
+
+
+
+
+
+
+
+/* 
 /** breakpoints (margin / paddings) **/
 
 @media screen and (max-width: 1280px) {
@@ -1036,6 +995,8 @@ text-align: left;
   display: flex;
   flex-direction: column;
 }
+
+
 
 
 /* Responsive Design */
@@ -1107,15 +1068,8 @@ text-align: left;
   font-style: normal;
 }
 
-.contact-item {
-  color: #fff;
-  font-size: 14px;
-  line-height: 19.6px;
-}
 
-.contact-item p {
-  font-size: 14px;
-}
+
 
 .contact-label {
   font-weight: 700;
@@ -1212,112 +1166,7 @@ text-align: left;
   }
 }
 
- */
 
 
 
- /* footer 2 */
-
- .container--0- {
-  position: relative;
-  width: auto;
-  height: auto;
-  background-color: #231f20b2;
-  max-width: 1920px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding: 100px 0px 100px 0px;
-}
-.text-0-1-1 {
-  width: 100%;
-  height: 100%;
-  color: #ffffff;
-  font-size: 16px;
-  font-family: Figtree, "SemiBold";
-  font-weight: 600;
-  text-align: center;
-  vertical-align: top;
-}
-.container-0-1-2 {
-  position: relative;
-  width: 1300px;
-  height: 286.421875px;
-  max-width: 1519px;
-  justify-content: center;
-  align-items: start;
-  gap: 29.5px;
-  display: flex;
-  padding: 10px 0px 10px 0px;
-}
-.container-1-2-0 {
-  position: relative;
-  width: 367px;
-  height: 266.421875px;
-  max-width: 1320px;
-  justify-content: start;
-  align-items: start;
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-  padding: 32px 32px 32px 32px;
-}
-.container-3-4-0 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  justify-content: start;
-  align-items: start;
-  display: flex;
-  flex-direction: column;
-}
-.text-4-5-0 {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  color: #ffffff;
-  box-shadow: 0px 4px 4px 0 #000000;
-  font-size: 16px;
-  font-family: Figtree, "Regular";
-  font-weight: 400;
-  text-align: left;
-  vertical-align: top;
-}
-.container-3-4-1 {
-  position: absolute;
-  left: 32px;
-  top: 122.421875px;
-  width: 24px;
-  height: 24px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 4px 0 #000000;
-  justify-content: start;
-  align-items: start;
-}
-.container-1-2-1 {
-  position: relative;
-  width: 367px;
-  height: 190px;
-  max-width: 1320px;
-  justify-content: start;
-  align-items: start;
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 32px 32px 32px 32px;
-}
-.container-1-2-2 {
-  position: relative;
-  width: 367px;
-  height: 190px;
-  max-width: 1320px;
-  justify-content: start;
-  align-items: start;
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 32px 32px 32px 32px;
-}
+  */
