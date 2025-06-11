@@ -837,6 +837,7 @@ nav a.active {
   padding: 3rem ;
   text-align: center;
   margin-bottom: 3rem;
+  position: relative  ;
 }
 
 .contact-form {
@@ -884,7 +885,15 @@ nav a.active {
   caret-color: var(--accent-color);
 }
 
-
+.form-bg {
+   position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 30%;
+    height: auto;
+    
+    z-index: 1000000000; 
+}
 
 
 /* Footer */
@@ -922,13 +931,19 @@ nav a.active {
 }
 
  .container-container {
-  display: block;
+  /* display: block; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem;
   width: 100%;
+  
+  /* width: 100%;
   height: fit-content;
 	position: relative;
 	flex-grow: 1; 
   margin: auto;
-  padding: 1.5rem;
+   */
 } 
 
 .footer-contact-section {
@@ -949,7 +964,7 @@ text-align: left;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  line-height: 1.7rem;
+  line-height: 2.2rem;
 }
 
 .contact-item i {
@@ -957,6 +972,10 @@ text-align: left;
   flex-shrink: 0;
   margin-right: 0.5rem;
   width: 1rem;
+}
+
+.contact-item a {
+    font-weight: 300; 
 }
 
 
