@@ -1,5 +1,8 @@
 
  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
  
  :root {
   --primary-color: #00B8BC;
@@ -119,6 +122,12 @@ h3 {
   color: #f1f1f1;
   text-align: center;
   margin: 1rem;
+}
+
+.accent-text {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .flex-container {
@@ -1265,6 +1274,122 @@ nav a.active {
   width: 100%;
 }
 
-/* .bookings .customers {
-  border-bottom: 1px solid #f0f0f0;
+/* Our story */
+
+.our-story .hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10; /* Ensures it's above the gallery */
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+/* .our-story .hero-title {
+  
+  align-items: center;
+  text-align: center;
 } */
+
+
+.story-container {
+  padding: 75px 0;
+  margin: 0 auto;
+  width: 1140px;
+}
+
+.our-story h1 {
+  position: relative;
+  text-align: center;
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 70vh;
+  z-index: -100;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.5s ease;
+
+  &:hover {
+    flex: 5;
+  }
+}
+
+.item-1 {
+  /* background-image: url("https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80"); */
+  background-image: url(assets/corporate-events-take-out.jpeg);
+}
+
+.item-2 {
+  /* background-image: url("https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80"); */
+  background-image: url(assets/private-functions-breakfast-burrito.jpeg);
+}
+
+.item-3 {
+  /* background-image: url("https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80"); */
+  background-image: url(assets/meatmykitchen-food.jpg);
+}
+
+.item-4 {
+  /* background-image: url("https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80"); */
+  background-image: url(assets/markets-burger.jpeg);
+}
+
+.item-5 {
+  /* background-image: url("https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80"); */
+  background-image: url(assets/food-burger.jpeg);
+}
+
+@media (max-width: 880px) {
+    .our-story .hero-title {
+        font-size: 2.7rem; /* Reduce size for smaller screens */
+        top: 40%; /* Adjust positioning */
+        width: 90%; /* Prevent overflow */
+        padding: 1rem; /* Add some space around */
+    }
+}
+
+@media (max-width: 600px) {
+    .our-story .hero-title {
+        font-size: 2.5rem;
+        top: 50%;
+        width: 85%;
+    }
+}
+
+
+/* Poem */
+
+.poem {
+  float: right;
+  padding: 5em;
+  background: linear-gradient(#D1BFA1,#D1C4AD);
+  background: #6B724C;
+  background: linear-gradient(#6B724C,#808765);
+  height: 100%;
+  box-sizing: border-box;
+  width: 60%;
+  min-width: 480px;
+  margin-right: 6%;
+  padding-left: 6%;
+}
+
+.poem p {
+  line-height: 1.8rem;
+}
+
+.poem p+p {
+  margin-top: 2rem;
+}
