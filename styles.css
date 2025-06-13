@@ -1374,7 +1374,6 @@ nav a.active {
 }
 
 
-
 .poem {
   position: relative;
     flex: 1; 
@@ -1397,17 +1396,12 @@ nav a.active {
   position: absolute;
   z-index: -1;
   top: -10%;
-  right: -30%;
+  right: -40%;
   width: 30em;
 }
 
 /* Philosophy (Right Side) */
-.philosophy {
-    flex: 1; /* Same width as the poem */
-    max-width: 50%;
-    align-items: flex-start;
-    text-align: left; 
-}
+
 
 
 .poem p {
@@ -1419,8 +1413,40 @@ nav a.active {
   margin-top: 2rem;
 }
 
+.philosophy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: none;
+ 
+}
+
+
 .philosophy img {
-    filter: brightness(0) invert(1); /* Converts any SVG to white */
+    filter: brightness(0) invert(1); 
+    height: 3.5rem;
+    width: auto;
+}
+
+
+.south-african img {
+    filter: none; 
+}
+
+.philosophy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.philosophy-heading {
+  font-size: 1.7rem;
+  line-height: 2.2rem;
 }
 
 
