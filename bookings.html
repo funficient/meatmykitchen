@@ -52,8 +52,68 @@
 
   <main class="bookings" id="bookings">
 
+    <section class="hero-banner">
+
+      <div class="story-container">
+        <h1 class="hero-title">Ready to impress?</h1>
+
+        <div class="gallery-wrap">
+          <div class="item item-1"></div>
+          <div class="item item-2"></div>
+          <div class="item item-3"></div>
+          <div class="item item-4"></div>
+          <div class="item item-5"></div>
+        </div>
+      </div>
+        
+    </section>
+
+    <!-- <section class="booking-banner">
+
+    <h1 class="about-title">BOOK YOUR EVENT</h1>
+
+<div class="carousel-container">
+	<button class="nav-arrow left">‹</button>
+	<div class="carousel-track">
+		<div class="card" data-index="0">
+			<img src="assets/food-basket.png" alt="Team Member 1">
+		</div>
+		<div class="card" data-index="1">
+			<img src="assets/food-tray.jpeg" alt="Team Member 2">
+		</div>
+		<div class="card" data-index="2">
+			<img src="assets/food-burger.jpeg" alt="Team Member 3">
+		</div>
+		<div class="card" data-index="3">
+			<img src="assets/markets-burger.jpeg" alt="Team Member 4">
+		</div>
+		<div class="card" data-index="4">
+			<img src="assets/meatmykitchen-food.jpg" alt="Team Member 5">
+		</div>
+		<div class="card" data-index="5">
+			<img src="assets/corporate-events-take-out.jpeg" alt="Team Member 6">
+		</div>
+	</div>
+	<button class="nav-arrow right">›</button>
+</div>
+
+<!-- <div class="member-info">
+	<h2 class="member-name">David Kim</h2>
+	<p class="member-role">Founder</p>
+</div> -->
+
+<!-- <div class="dots">
+	<div class="dot active" data-index="0"></div>
+	<div class="dot" data-index="1"></div>
+	<div class="dot" data-index="2"></div>
+	<div class="dot" data-index="3"></div>
+	<div class="dot" data-index="4"></div>
+	<div class="dot" data-index="5"></div>
+</div> 
+</section> -->
+
     <!-- Services -->
-<section class="section-services">
+<!-- <section class="section-services">
   <div class="services-container ">
     <h2 class="section-heading">If you don’t like, it we don’t have it!</h2>
     <p class="section-subtitle">Get in touch to customize your menu and secure your date.</p>
@@ -79,12 +139,55 @@
 
     
   </div>
-</section>
+</section> -->
 
     
 
     <!------------------ What we do ------------------->
 
+<section class="contact-form-section">
+        <img src="assets/icon-vecteezy_graffiti.svg" class="form-bg" alt="Decorative background" />
+        <h2 class="section-title ">Book your event</h2>
+        <p class="form-subtitle">Enter your event details, including when, where, how many people (estimate) and any dietary requirements and we'll get back to.</p>
+        <form class="contact-form " action="https://formsubmit.co/kate@funficient.com" method="POST">
+          <div class="form-row">
+            <input
+              type="text"
+              placeholder="Name"
+              name="Name"
+              class="form-input"
+              required
+              aria-label="Name"
+            />
+            <input
+              type="tel"
+              placeholder="Telephone"
+              name="Telephone"
+              class="form-input"
+              required
+              aria-label="Telephone"
+            />
+          </div>
+          <input
+            type="email"
+            placeholder="Email"
+            name="Email"
+            class="form-input"
+            required
+            aria-label="Email"
+          />
+          <input type="hidden" name="_next" value="https://humanequation.netlify.app/thanks.html">
+          <input type="hidden" name="_captcha" value="false">
+          <textarea
+            placeholder="Enter your event details: When?  Where?  How many people? Dietary requirements?"
+            name="Message"
+            class="form-textarea"
+            required
+            aria-label="Message"
+          ></textarea>
+          <button type="submit" class="cta-buttons action-button">Send Message</button>
+        </form>
+      </section>
     
 
 <!------------------ How it works -------------------->
@@ -132,49 +235,6 @@
 <!-- Book your event Contact Section -->
 
 
-<section class="contact-form-section">
-        <img src="assets/icon-vecteezy_graffiti.svg" class="form-bg" alt="Decorative background" />
-        <h2 class="section-title ">Book your event</h2>
-        <p class="form-subtitle">Enter your event details, including when, where, how many people (estimate) and any dietary requirements and we'll get back to.</p>
-        <form class="contact-form " action="https://formsubmit.co/kate@funficient.com" method="POST">
-          <div class="form-row">
-            <input
-              type="text"
-              placeholder="Name"
-              name="Name"
-              class="form-input"
-              required
-              aria-label="Name"
-            />
-            <input
-              type="tel"
-              placeholder="Telephone"
-              name="Telephone"
-              class="form-input"
-              required
-              aria-label="Telephone"
-            />
-          </div>
-          <input
-            type="email"
-            placeholder="Email"
-            name="Email"
-            class="form-input"
-            required
-            aria-label="Email"
-          />
-          <input type="hidden" name="_next" value="https://humanequation.netlify.app/thanks.html">
-          <input type="hidden" name="_captcha" value="false">
-          <textarea
-            placeholder="Enter your event details: When?  Where?  How many people? Dietary requirements?"
-            name="Message"
-            class="form-textarea"
-            required
-            aria-label="Message"
-          ></textarea>
-          <button type="submit" class="cta-buttons action-button">Send Message</button>
-        </form>
-      </section>
 
 
       <!------------------ Customers -------------------->
