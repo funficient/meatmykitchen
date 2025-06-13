@@ -136,3 +136,8 @@ function handleSwipe() {
 }
 
 updateCarousel(0);
+
+
+
+
+

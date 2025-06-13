@@ -1786,6 +1786,7 @@ nav a.active {
 /* ==== “Meet Shaun & Wendy” split layout ============================= */
 .story-section {
   /* 1/3 – 2/3 desktop grid */
+  
   display: grid;
   grid-template-columns: 2fr 3fr;   /*  ≈33 % / 66 %  */
   gap: 3rem;
@@ -1795,7 +1796,7 @@ nav a.active {
 
   /* Optional container width & centering */
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 3rem auto ;
   align-items: stretch;
 }
 
@@ -1834,5 +1835,158 @@ nav a.active {
   .story-container-image {
     max-width: 90%;               /* avoids edge-to-edge image */
     margin: 0 auto 2rem;          /* center & add bottom gap   */
+  }
+}
+
+
+.address-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 60%;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 5rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  margin:0 auto;
+}
+
+.address-banner .address-item{    /* or .contact-item – use your class */
+  display:flex;
+  align-items:center;             /* icon & text share the baseline   */
+  gap:.75rem;                     /* space between icon and label     */
+}
+
+/* optional: fix icon size so text never shifts */
+.address-banner .address-item i,
+.address-banner .address-item svg{
+  flex:0 0 1.2rem;                /* reserve equal width for icons    */
+  height:1.2rem;                  /* keeps them square                */
+  font-size:1.2rem;               /* if you’re using Font Awesome     */
+}
+
+
+/* timeline */
+
+.timeline {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  
+  .timeline-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+    align-items: center;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      left: 50%;
+      background: #fff;
+      border: 3px solid #F6ED31;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 2;
+      border-radius: 100%;
+    }
+
+    > div {
+      width: 44%;
+
+      img {
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    }
+
+    &__content {
+      background: linear-gradient(to left, rgba(#000, 0.05), rgba(#000, 0) 50%);
+      line-height: 1.5;
+      padding: 5px 35px;
+      border-radius: 20px;
+      position: relative;
+      box-sizing: border-box;
+      margin-top: 22px;
+
+      .timeline-item__title {
+        color: #fff;
+        margin-bottom: 0;
+        font-size: 1.6em;
+        font-weight: 500;
+      }
+
+      .timeline-item__date {
+        position: absolute;
+        bottom: 100%;
+        right: 50%;
+        padding-bottom: 3px;
+        font-size: 1.2em;
+        font-weight: bold;
+        opacity: 1;
+        color: #fff;
+        
+        letter-spacing: -0.025em;
+        line-height: 1.2rem;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        top: calc(50% - 10px);
+        left: 100%;
+        transform: translateY(-50%);
+
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 0 20px 20px;
+        border-color: transparent transparent transparent rgba(#000, 0.05);
+      }
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .timeline-item__content {
+        background: linear-gradient(
+          to right,
+          rgba(#000, 0.05),
+          rgba(#000, 0) 50%
+        );
+
+        .timeline-item__date {
+          position: absolute;
+          bottom: 100%;
+          left: 5px;
+          right: auto;
+        }
+
+        &:after {
+          left: auto;
+          right: 100%;
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background: #fff ;
   }
 }
