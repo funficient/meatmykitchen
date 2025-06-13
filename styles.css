@@ -981,20 +981,12 @@ nav a.active {
 }
 
  .footer-body-container {
-  /* display: block; */
+  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   padding: 1.5rem;
   width: 100%;
-
-  
-  /* width: 100%;
-  height: fit-content;
-	position: relative;
-	flex-grow: 1; 
-  margin: auto;
-   */
 } 
 
 .footer-contact-section {
@@ -1036,9 +1028,6 @@ nav a.active {
 .contact-item a {
     font-weight: 300; 
 }
-
-
-
 
 
 /* 
@@ -1370,26 +1359,72 @@ nav a.active {
 }
 
 
-/* Poem */
+/* Poem  & Philosophy*/
+
+.poem-section {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 2rem; 
+    padding: 3em;
+    
+}
+
+
 
 .poem {
-  float: right;
-  padding: 5em;
-  background: linear-gradient(#D1BFA1,#D1C4AD);
-  background: #6B724C;
-  background: linear-gradient(#6B724C,#808765);
+  position: relative;
+    flex: 1; 
+    max-width: 30%;
+    padding: 5em;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
   height: 100%;
   box-sizing: border-box;
-  width: 60%;
-  min-width: 480px;
-  margin-right: 6%;
-  padding-left: 6%;
+  margin: 0 auto;
+  
+  /* width: 100%; */
+  text-align: center;
+  
+  
 }
+
+.graffiti-bg {
+  position: absolute;
+  z-index: -1;
+  top: -10%;
+  right: -30%;
+  width: 30em;
+}
+
+/* Philosophy (Right Side) */
+.philosophy {
+    flex: 1; /* Same width as the poem */
+    max-width: 50%;
+    align-items: flex-start;
+    text-align: left; 
+}
+
 
 .poem p {
   line-height: 1.8rem;
+  z-index: 1000;
 }
 
 .poem p+p {
   margin-top: 2rem;
+}
+
+
+@media (max-width: 880px) {
+    .poem-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .poem, .philosophy {
+        max-width: 100%; /* Full width on small screens */
+    }
 }
