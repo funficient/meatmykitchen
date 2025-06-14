@@ -14,8 +14,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
   
 </style>
-
-
   
   <link rel="icon" type="image/x-icon" href="assets/foodtruck-icon-bw.png">
   <link rel="stylesheet" href="menu.css" />
@@ -37,8 +35,7 @@
       <a class="" href="index.html">Home</a>
       <a href="our-story.html">Our Story</a>
       <a class="active" href="menu.html">Menu</a>
-      <a href="bookings.html">
-        <button class="action-button">Book your event</button></a>
+      <a href="bookings.html" class="menu-button action-button">Book your event</a>
     </nav>
     <div class="icons">
       <a href="https://facebook.com/meatmykitchen" target="_blank" aria-label="Facebook">
@@ -180,6 +177,7 @@
       </div>
     </div>
   </div>
+    </div>
 
    </section>
 
@@ -190,7 +188,20 @@
   <!-- footer -->
 
 
+    <!-- footer -->
+
    <script>
+        // Function to handle sticky header on scroll
+        window.addEventListener("scroll", function() {
+            const header = document.querySelector(".sticky-header");
+            if (window.scrollY > 50) {  // When the user scrolls 50px down
+                header.style.position = "fixed";
+            } else {
+                header.style.position = "absolute";
+            }
+        });
+
+        // Function to show selected tab
         function showTab(tabId) {
             // Hide all tab contents
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('selected'));
@@ -198,7 +209,12 @@
             // Show the selected tab content
             document.getElementById(tabId).classList.add('selected');
         }
-    </script>
+   </script>
+  
+    </main>
+  </body>
+</html>
+
   
     </main>
   </body>

@@ -182,7 +182,7 @@ h3 {
   margin-top: 2rem;
 }
 
-.action-button {
+.action-button, .menu-button {
   padding: 0.9rem 1.3rem;
   background-color: var(--accent-color);
   color: #111;
