@@ -62,22 +62,26 @@
           <p class="subtitle">Book your event to customise your menu and secure your date.</p>
       </div>
 
+
       <nav class="menu-navigation">
-          <div class="tab" onclick="showTab('breakfast')">Breakfast Vibes</div>
-          <div class="tab" onclick="showTab('chimichangas')">Legendary Chimichangas</div>
-          <div class="tab" onclick="showTab('burgers')">Seriously Stacked Burgers</div>
-          <div class="tab" onclick="showTab('braai')">Sizzling Braai Plates</div>
-          <div class="tab" onclick="showTab('salads')">Sensational Salads</div>
+        <div class="tab selected" onclick="showTab('breakfast', this)">Breakfast Vibes</div>
+        <div class="tab" onclick="showTab('chimichangas', this)">Legendary Chimichangas</div>
+        <div class="tab" onclick="showTab('burgers', this)">Seriously Stacked Burgers</div>
+        <div class="tab" onclick="showTab('braai', this)">Sizzling Braai Plates</div>
+        <div class="tab" onclick="showTab('salads', this)">Sensational Salads</div>
       </nav>
 
+
       <!-- Tab content -->
-        <div id="breakfast" class="tab-content selected">
-          <img src="assets/menu-breakfast.png" class="menu-bg" alt="Decorative background" />
+       <div class="menu-section-container">
+        <div id="breakfast" class="tab-content selected ">
+          
           <h2>Breakfast Vibes</h2>
           <p class="subtitle">Rise and shine with our delicious breakfast bites.</p>
+          <img src="assets/menu-breakfast.png" class="menu-bg" alt="Decorative background" />
 
-          <div class="menu-tab-container">
-              <div class="menu-items">
+          <div class="menu-tab-container ">
+              <div class="menu-items ">
                 <div class="menu-item">
                   <div class="menu-heading">Sunrise Roll</div>
                   <div class="menu-item-text">
@@ -176,6 +180,7 @@
               </div>
           </div>
         </div>
+        </div>
 
    </section>
 
@@ -210,24 +215,21 @@
 
     window.addEventListener("scroll", handleScroll);
 
-        // // Function to handle sticky header on scroll
-        // window.addEventListener("scroll", function() {
-        //     const header = document.querySelector(".sticky-header");
-        //     if (window.scrollY > 50) {  // When the user scrolls 50px down
-        //         header.style.position = "fixed";
-        //     } else {
-        //         header.style.position = "absolute";
-        //     }
-        // });
+    // /Script to only show to the selected tab contents/ 
 
-        // Function to show selected tab
-        function showTab(tabId) {
-            // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('selected'));
 
-            // Show the selected tab content
-            document.getElementById(tabId).classList.add('selected');
-        }
+  function showTab(tabId, clickedTab) {
+    document.querySelectorAll('.menu-navigation .tab')
+      .forEach(t => t.classList.remove('selected'));
+
+    clickedTab.classList.add('selected');
+
+    document.querySelectorAll('.tab-content')
+      .forEach(c => c.classList.remove('selected'));
+
+    document.getElementById(tabId).classList.add('selected');
+  }
+
    </script>
   
   </main>

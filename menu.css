@@ -248,8 +248,33 @@ nav a.active {
 
 }
 
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
 
-/* Menu contents */
+.action-button {
+  padding: 0.9rem 1.3rem;
+  background-color: var(--accent-color);
+  color: #111;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid  #F6ED31;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.action-button:hover {
+    background-color: #d1c92b;
+    transform: scale(1.01);
+    }
+
+/*------------- Menu -----------*/
+/* /* Menu contents */
 
 .menu-main {
   display: flex;
@@ -260,29 +285,6 @@ nav a.active {
   position: relative;
 }
 
-.tab { display: inline-block; padding: 1rem 2rem; margin: 1rem 0.5rem; cursor: pointer; background: var(--accent-color); 
-  color:#000; border-radius: 0.5rem; }
-
-.tab:hover { background: #fff; }
-
-.tab-content { display: none; padding: 20px; 
-  
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 0.8rem;
-  margin-top: 10px; 
-}
-
-.menu-bg {
-  display: absolute;
-  top: 2rem;
-  right: 2rem;
-  z-index: 100;
-}
-
-.selected { display: block; }
-
-/* Magezon import */
-
 .subtitle {
   font-size: 1.1rem;
   font-weight: 400;
@@ -291,6 +293,93 @@ nav a.active {
   margin:  0;
   margin-bottom: 2rem;
 }
+
+.menu-navigation .tab {
+  /* padding: 1em 2em; */
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-navigation .tab.selected {
+  background:var(--accent-color);       
+  border-color: var(--accent-color);
+  color: #000;
+}
+
+.tab:hover, .tab.selected:hover { 
+  background: #fff; 
+  color: #000;
+  }
+
+/*------------- Menu -----------*/
+
+.menu-section-container,
+.tab-content.selected {
+  text-align: left;   
+}
+
+.menu-tab-container,
+.menu-items {
+  margin: 0;               
+  align-items: flex-start; 
+}
+
+.tab-content {
+  display: none;
+  position: relative;  
+  z-index: 1;  
+  padding: 2rem; 
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.8rem;
+  margin-top: 1rem; 
+
+}
+
+
+.tab-content .menu-bg {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  
+  pointer-events: none;
+  z-index: -1;          
+}
+
+
+.tab-content.selected {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+  
+/* .menu-bg {
+  display: absolute;
+  top: 10%;
+  right: 0;
+  z-index: -100;
+  pointer-events: none;  
+} */
+
+#breakfast.tab-content.selected {
+  width: 100%;
+}
+/* .menu-bg {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  width: 35%;
+  opacity: 0.15;
+  pointer-events: none;
+
+  z-index: 0;      /* sits behind the text (z-index:1) but above the page background */
+} */
+
 
 .menu-items {
   display: flex;
@@ -318,7 +407,7 @@ nav a.active {
 }
 .menu-item-text {
   display: flex;
-  width: 914px;
+  width: 100%;
   height: auto;
   color: #f0f0f0;
   font-size: 1rem;
@@ -337,4 +426,117 @@ nav a.active {
   opacity: 80%;
   margin: 1rem 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Menu contents */
+
+
+
+.menu-navigation .tab {
+  padding: 1em 2em;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-navigation .tab.selected {
+  background:var(--accent-color);       
+  border-color: var(--accent-color);
+  color: #000;
+}
+
+.tab:hover, .tab.selected:hover { 
+  background: #fff; 
+  color: #000;
+  }
+
+/*------------- Menu -----------*/
+.tab-content { 
+  
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.8rem;
+  margin-top: 10px; 
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+.tab-content {
+  display: none;
+  position: relative;
+  padding: 2rem;
+  
+  
+}
+.tab-content.selected {
+  display: block;
+}
+  
+
+.menu-items .tab-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Magezon import */
+
+
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem 2rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+.menu-item {
+  text-align: left;
+  padding: 2rem 0;
+}
+
+.menu-heading {
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: left;
+  vertical-align: top;
+  margin-bottom: 1rem;
+}
+.menu-item-text {
+  display: flex;
+  width: 100%;
+  height: auto;
+  color: #f0f0f0;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.7rem;
+}
+
+
+
+
+
+
+
+
 

@@ -182,7 +182,7 @@ h3 {
   margin-top: 2rem;
 }
 
-.action-button, .menu-button {
+.action-button {
   padding: 0.9rem 1.3rem;
   background-color: var(--accent-color);
   color: #111;
@@ -1406,7 +1406,6 @@ nav a.active {
     
 }
 
-
 .poem {
   position: relative;
     flex: 1; 
@@ -1509,7 +1508,6 @@ nav a.active {
     padding: 2rem;
     
 }
-
 
 
 
@@ -1990,3 +1988,9 @@ nav a.active {
     background: #fff ;
   }
 }
+
+
+
+
+
+
