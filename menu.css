@@ -294,6 +294,10 @@ nav a.active {
   margin-bottom: 2rem;
 }
 
+.menu-navigation {
+  margin: 3rem 0;
+}
+
 .menu-navigation .tab {
   /* padding: 1em 2em; */
   border: 2px solid #fff;
@@ -316,6 +320,13 @@ nav a.active {
   }
 
 /*------------- Menu -----------*/
+
+.menu-selection-container {
+  width: 100%;
+  max-width: 1200px;   
+  box-sizing: border-box;
+  margin: 0 auto;    
+}
 
 .menu-section-container,
 .tab-content.selected {
@@ -357,29 +368,10 @@ nav a.active {
   position: relative;
 }
   
-/* .menu-bg {
-  display: absolute;
-  top: 10%;
-  right: 0;
-  z-index: -100;
-  pointer-events: none;  
-} */
 
 #breakfast.tab-content.selected {
   width: 100%;
 }
-/* .menu-bg {
-  position: absolute;
-  top: 50%;
-  right: 2rem;
-  transform: translateY(-50%);
-  width: 35%;
-  opacity: 0.15;
-  pointer-events: none;
-
-  z-index: 0;      /* sits behind the text (z-index:1) but above the page background */
-} */
-
 
 .menu-items {
   display: flex;
@@ -431,17 +423,18 @@ nav a.active {
 
 
 
-
-
-
-
-
-
-
-
 /* Menu contents */
 
-
+.menu-navigation {
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  flex-wrap: wrap;          
+  gap: 0.75rem;             
+  margin: 2rem auto;        
+  width: 100%;
+  max-width: 800px;         
+}
 
 .menu-navigation .tab {
   padding: 1em 2em;
@@ -539,4 +532,103 @@ nav a.active {
 
 
 
+/*————————————————————————————————————————————————————————————*/
+/* Mobile responsive tweaks                                         */
+/*————————————————————————————————————————————————————————————*/
+
+/* 1) Tablets & small laptops: up to 1024px */
+@media (max-width: 1024px) {
+  /* Header: reduce padding, allow wrapping */
+  .sticky-header {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .nav-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-content .subtitle { font-size: 1rem; }
+}
+
+/* 2) Tablets / landscape phones: up to 768px */
+@media (max-width: 768px) {
+  /* Collapse menu-main to single column */
+  .menu-main {
+    flex-direction: column;
+    margin-top: 6rem;
+    padding: 1rem;
+  }
+
+  /* Tabs: make them scrollable horizontally */
+  .menu-navigation {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+  }
+  .menu-navigation .tab {
+    display: inline-block;
+    flex: 0 0 auto;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    margin: 0 0.25rem;
+  }
+
+  /* Pane: remove right gutter, hide background-img */
+  .tab-content {
+    padding: 1.5rem;
+  }
+  .menu-bg {
+    display: none;
+  }
+
+  /* Menu items: tighten spacing */
+  .menu-item {
+    padding: 1.5rem 0;
+  }
+  .menu-heading { font-size: 1.4rem; }
+  .menu-item-text { font-size: 0.9rem; }
+}
+
+/* 3) Phones / narrow screens: up to 480px */
+@media (max-width: 480px) {
+  /* Header icons & logo smaller */
+  .sticky-header {
+    padding: 0.5rem;
+  }
+  .logo img { height: 2.5rem; }
+  .icons a { font-size: 1rem; }
+
+  /* Hero text smaller */
+  .hero-content h1 { font-size: 1.8rem; margin: 1rem 0; }
+  .hero-content .subtitle { font-size: 0.9rem; }
+
+  /* Tabs: full width, stacked */
+  .menu-navigation .tab {
+    display: block;
+    width: 100%;
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+
+  /* Content padding tighter */
+  .tab-content {
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Menu items: icon + text stack */
+  .menu-item-text {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
 
