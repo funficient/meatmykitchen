@@ -1287,8 +1287,6 @@ footer .contact-item i {
     }
 }
 
-
-
 .our-story .text-content-container {
   width: 100%;
   max-width: 100%;
@@ -1415,13 +1413,20 @@ footer .contact-item i {
 }
 
 .philosophy {
-  display: flex;
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  width: 80vw;
+  margin: 0 auto;
+  
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
   
   align-items: center;
   gap: 2rem;
-  padding: 2rem 5rem;
+  padding: 2rem 5rem; */
   background: none;
  
 }
@@ -1443,6 +1448,8 @@ footer .contact-item i {
   align-items: center;
   justify-content: center;
   flex: 1;
+  gap: 1rem;
+  padding: 1rem;
 }
 .philosophy-heading {
   font-size: 1.7rem;
@@ -1457,11 +1464,33 @@ footer .contact-item i {
         text-align: center;
     }
 
-    .poem, .philosophy {
-        max-width: 100%; /* Full width on small screens */
-    }
+  
 }
 
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .philosophy {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .philosophy {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .philosophy-container {
+    padding: 0.5rem;
+  }
+
+  .philosophy-heading {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 
 /* bookings carousel - not used*/
 
@@ -1908,7 +1937,59 @@ footer .contact-item i {
 }
 
 
+@media (max-width: 1024px) {
+  .timeline {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
 
+@media (max-width: 768px) {
+  .timeline {
+    .timeline-item {
+      flex-direction: column;
+      margin: 40px 0;
+      
+      > div {
+        width: 100%;
+      }
+
+      &:after {
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &:after {
+      /* Vertical line */
+      left: 10px;
+    }
+
+    .timeline-item__content {
+      padding: 15px;
+      margin-top: 10px;
+      
+      .timeline-item__date {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        left: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    /* Remove the different styling for even items */
+    .timeline-item:nth-child(even) {
+      flex-direction: column;
+      
+      .timeline-item__content {
+        .timeline-item__date {
+          left: 0;
+        }
+      }
+    }
+  }
+}
 
 
 
