@@ -284,6 +284,8 @@ nav a.active {
   padding: 2rem;
   margin-top: 10rem;
   position: relative;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .subtitle {
@@ -307,8 +309,11 @@ nav a.active {
 }
 
 .menu-navigation .tab {
-  flex: 1 1 ;
+  flex: 0 1 auto;
+  min-width: fit-content;
   flex-wrap: wrap ;
+  margin: 0.25rem; 
+  white-space: nowrap;
   padding: 1em 2em;
   border: 2px solid #fff;
   color: #fff;
@@ -336,7 +341,8 @@ nav a.active {
   max-width: 1200px;      
   width: 100%;           
   margin: 0 auto 2rem;   
-  padding: 0 1rem;       
+  padding: 0 1rem;   
+  overflow: visible;    
 }
 
 .menu-section-container,
@@ -382,8 +388,6 @@ nav a.active {
   width: 100%;
   position: relative;
 }
-  
-
 
 .menu-items {
   display: flex;
@@ -430,7 +434,6 @@ nav a.active {
   opacity: 80%;
   margin: 1rem 0;
 }
-
 
 /*------------- Menu -----------*/
 .tab-content { 
@@ -497,11 +500,6 @@ nav a.active {
 }
 
 
-/*————————————————————————————————————————————————————————————*/
-/* Mobile responsive tweaks                                         */
-/*————————————————————————————————————————————————————————————*/
-
-/* 1) Tablets & small laptops: up to 1024px */
 @media (max-width: 1024px) {
   
   .sticky-header {
@@ -520,13 +518,10 @@ nav a.active {
     justify-content: center;
   }
   .hero-content h1 { font-size: 2.2rem; }
-  .hero-content .subtitle { font-size: 1rem; 
+  .hero-content .subtitle { font-size: 1rem; }
 
  .menu-navigation {
     flex-wrap: wrap ;
-    /* overflow-x: auto; */
-    /* white-space: wrap;
-    margin-bottom: 1rem auto; */
   }
 
   .menu-navigation .tab {
@@ -540,15 +535,38 @@ nav a.active {
     padding: 1.5rem;
   }
 
+
+
+  .menu-section {
+    width: 100%;
+    padding: 1rem;
+  }
+
+    .tab-content.selected, .menu-section-container {
+    width: 100%;
+  }
+
+      .menu-section-container {
+    padding: 1rem;
+  }
+
+  .subtitle {
+    padding: 0 2rem;
+  }
+
 }
 @media (max-width: 768px) {
 
   .menu-main {
-    flex-direction: column;
-    margin-top: 6rem;
+     flex-direction: column; 
+    /*margin-top: 6rem; */
     padding: 1rem;
+    
   }
 
+
+
+ 
  
   .menu-bg {
     display: none;
@@ -605,8 +623,5 @@ nav a.active {
     font-size: 1rem;
   }
 
-  .menu-section-container {
-    padding: 0 0.5rem;
-  }
 
 }
