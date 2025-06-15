@@ -374,14 +374,17 @@ nav a.active {
 
 .tab-content .menu-bg {
   position: absolute;
-  top: 50%;
+  top: 20%;
   right: 0;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   
   pointer-events: none;
   z-index: -1;          
 }
 
+.flip-horizontal {
+      transform: scaleX(-1);
+}
 
 .tab-content.selected {
   display: block;
