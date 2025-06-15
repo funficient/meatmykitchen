@@ -498,7 +498,7 @@ nav a.active {
     align-items: center;
     width: 100vw; 
     height: auto;
-    padding: 1rem 10%; 
+    padding: 0 10%; 
     gap: 1rem;
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -870,15 +870,10 @@ nav a.active {
 
   }
   .food-image {
-    height: auto; /* Allow natural height based on aspect ratio */
-    aspect-ratio: 410 / 553; /* Maintain original aspect ratio */
+    height: auto; 
+    aspect-ratio: 410 / 553; 
   }
   
-/* Contact Us form */
-
-/*--------------------- Contact Section -----------------*/
-
-
 
 
 /* Contact Form Section */
@@ -887,6 +882,7 @@ nav a.active {
   text-align: center;
   margin-bottom: 3rem;
   position: relative  ;
+  align-items: center;
 }
 
 .contact-form-section .section-title {
@@ -894,8 +890,18 @@ nav a.active {
 }
 
 .contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.contact-form button[type="submit"] {
+    display: block;
+    margin: 0 auto;  
+    margin-top: 1rem;
 }
 
 .form-row {
@@ -939,15 +945,20 @@ nav a.active {
 }
 
 .form-bg {
-   position: absolute;
-    top: 2rem;
-    right: 2rem;
-    width: 30%;
-    height: auto;
-   
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 30%;
+  height: auto;
 }
+@media screen and (max-width: 780px) {
+.form-bg {
 
-
+  width: 100%;
+  height: auto;
+  z-index: -2;
+}
+}
 /* Footer */
 .footer {
 	display: flex;
@@ -994,7 +1005,6 @@ nav a.active {
 }
 
  .footer-body-container {
-  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
@@ -1005,21 +1015,20 @@ nav a.active {
 .footer-contact-section {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   justify-content: left;
   text-align: left;
-  margin: 0;
-  padding: 0;
-  
+  gap: 1rem;
 }
 
 .footer-section-title {
   display: flex;
   align-self: flex-start;
   text-align: left ;
-  margin-left: 1rem;
-
+  margin: 0;
+  padding: 0;
 }
+
 
 .contact-item {
   display: flex;
@@ -1041,21 +1050,18 @@ nav a.active {
 .contact-item a {
     font-weight: 300; 
 }
+footer .contact-item a,
+footer .contact-item p {
+    font-weight: 400;
+    font-size: 0.9rem; 
+}
 
-
-/* 
-/** breakpoints (margin / paddings) **/
+footer .contact-item i {
+  align-self: center;
+}
 
 @media screen and (max-width: 1280px) {
 	
-	.footer-body-container {
-		margin-inline: 0;
-	}
-	
-}
-/*--------------- Footer ------------------*/
-
-
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -1070,14 +1076,30 @@ nav a.active {
   flex-direction: column;
   align-items: flex-start;
 }
-
-
-
+}
 
 /* Responsive Design */
 @media (max-width: 991px) {
+  .footer-container-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+   footer .footer-body-container {
+      display: grid;
+      grid-template-columns: 1fr; !important
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+.footer-nav + .footer-nav .footer-section-title {
+  margin-top: 1rem;
+}
+
+
   .contact-section {
     padding: 50px 20px;
+    
   }
 
   .contact-content {
@@ -1106,16 +1128,6 @@ nav a.active {
   outline: none;
 }
 
-.form-input:focus,
-.form-textarea:focus {
-  outline: 2px solid #0f4761;
-}
-
-.submit-button:hover,
-.submit-button:focus {
-  background-color: #0d3a4f;
-  outline: none;
-}
 
 /* Accessibility Enhancements */
 .submit-button:focus-visible,
@@ -1123,7 +1135,7 @@ nav a.active {
 .footer-link:focus-visible {
   outline: 3px solid #fff;
   outline-offset: 2px;
-}
+} 
 
 .footer-section-title {
   color: #fff;
@@ -1138,15 +1150,13 @@ nav a.active {
 
 .footer-contact-section {
   flex: 1;
+  flex-direction: column;
 }
 
 .contact-info {
   margin-bottom: 69px;
   font-style: normal;
 }
-
-
-
 
 .contact-label {
   font-weight: 700;
@@ -1161,10 +1171,6 @@ nav a.active {
 
 .footer-navigation-section {
   flex: 1;
-}
-
-.footer-nav + .footer-nav .footer-section-title {
-  margin-top: 47px;
 }
 
 .footer-nav-list {
@@ -1194,7 +1200,7 @@ nav a.active {
 }
 
 .footer-courses-section .footer-nav + .footer-nav .footer-section-title {
-  margin-top: 48px;
+  margin-top: 3rem;
 }
 
 .footer-bottom {
@@ -1261,8 +1267,7 @@ nav a.active {
 
 .bookings .form-bg {
   top: 0;
-   z-index: -200;
-  
+  z-index: -200;
 }
 
 .bookings .customers {
