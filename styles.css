@@ -196,6 +196,7 @@ h3 {
 
 .action-button:hover {
     background-color: #d1c92b;
+    color: #000;
     transform: scale(1.01);
     }
 

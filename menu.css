@@ -270,6 +270,7 @@ nav a.active {
 
 .action-button:hover {
     background-color: #d1c92b;
+    color: #000;
     transform: scale(1.01);
     }
 
@@ -295,14 +296,24 @@ nav a.active {
 }
 
 .menu-navigation {
-  margin: 3rem 0;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  flex-wrap: wrap;          
+  gap: 0.75rem;             
+  margin: 3rem auto;        
+  width: 100%;
+  max-width: 1000px;    
 }
 
 .menu-navigation .tab {
-  /* padding: 1em 2em; */
+  flex: 1 1 ;
+  flex-wrap: wrap ;
+  padding: 1em 2em;
   border: 2px solid #fff;
   color: #fff;
   border-radius: 0.5rem;
+  text-align: center;
   cursor: pointer;
   background: transparent;
   transition: background 0.2s, color 0.2s;
@@ -320,17 +331,21 @@ nav a.active {
   }
 
 /*------------- Menu -----------*/
-
-.menu-selection-container {
-  width: 100%;
-  max-width: 1200px;   
-  box-sizing: border-box;
-  margin: 0 auto;    
+.menu-section-container {
+  display: flex;
+  max-width: 1200px;      
+  width: 100%;           
+  margin: 0 auto 2rem;   
+  padding: 0 1rem;       
 }
 
 .menu-section-container,
 .tab-content.selected {
-  text-align: left;   
+  text-align: left;  
+  flex: 0 1 auto;  
+  
+  width: 1000px;                
+  box-sizing: border-box; 
 }
 
 .menu-tab-container,
@@ -347,14 +362,14 @@ nav a.active {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 0.8rem;
   margin-top: 1rem; 
-
+  width: 100%;
+  box-sizing: border-box;
 }
-
 
 .tab-content .menu-bg {
   position: absolute;
   top: 50%;
-  right: 2rem;
+  right: 0;
   transform: translateY(-50%);
   
   pointer-events: none;
@@ -369,9 +384,6 @@ nav a.active {
 }
   
 
-#breakfast.tab-content.selected {
-  width: 100%;
-}
 
 .menu-items {
   display: flex;
@@ -420,43 +432,6 @@ nav a.active {
 }
 
 
-
-
-
-/* Menu contents */
-
-.menu-navigation {
-  display: flex;
-  justify-content: center;  
-  align-items: center;
-  flex-wrap: wrap;          
-  gap: 0.75rem;             
-  margin: 2rem auto;        
-  width: 100%;
-  max-width: 800px;         
-}
-
-.menu-navigation .tab {
-  padding: 1em 2em;
-  border: 2px solid #fff;
-  color: #fff;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  background: transparent;
-  transition: background 0.2s, color 0.2s;
-}
-
-.menu-navigation .tab.selected {
-  background:var(--accent-color);       
-  border-color: var(--accent-color);
-  color: #000;
-}
-
-.tab:hover, .tab.selected:hover { 
-  background: #fff; 
-  color: #000;
-  }
-
 /*------------- Menu -----------*/
 .tab-content { 
   
@@ -483,10 +458,6 @@ nav a.active {
   position: relative;
   z-index: 1;
 }
-
-
-/* Magezon import */
-
 
 
 .menu-items {
@@ -526,19 +497,13 @@ nav a.active {
 }
 
 
-
-
-
-
-
-
 /*————————————————————————————————————————————————————————————*/
 /* Mobile responsive tweaks                                         */
 /*————————————————————————————————————————————————————————————*/
 
 /* 1) Tablets & small laptops: up to 1024px */
 @media (max-width: 1024px) {
-  /* Header: reduce padding, allow wrapping */
+  
   .sticky-header {
     padding: 0.75rem 1rem;
     flex-wrap: wrap;
@@ -555,41 +520,40 @@ nav a.active {
     justify-content: center;
   }
   .hero-content h1 { font-size: 2.2rem; }
-  .hero-content .subtitle { font-size: 1rem; }
-}
+  .hero-content .subtitle { font-size: 1rem; 
 
-/* 2) Tablets / landscape phones: up to 768px */
+ .menu-navigation {
+    flex-wrap: wrap ;
+    /* overflow-x: auto; */
+    /* white-space: wrap;
+    margin-bottom: 1rem auto; */
+  }
+
+  .menu-navigation .tab {
+    display: inline-block;
+    /* flex: 0 0 auto; */
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    margin: 0 0.25rem;
+  }
+  .tab-content {
+    padding: 1.5rem;
+  }
+
+}
 @media (max-width: 768px) {
-  /* Collapse menu-main to single column */
+
   .menu-main {
     flex-direction: column;
     margin-top: 6rem;
     padding: 1rem;
   }
 
-  /* Tabs: make them scrollable horizontally */
-  .menu-navigation {
-    overflow-x: auto;
-    white-space: nowrap;
-    margin-bottom: 1rem;
-  }
-  .menu-navigation .tab {
-    display: inline-block;
-    flex: 0 0 auto;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-    margin: 0 0.25rem;
-  }
-
-  /* Pane: remove right gutter, hide background-img */
-  .tab-content {
-    padding: 1.5rem;
-  }
+ 
   .menu-bg {
     display: none;
   }
 
-  /* Menu items: tighten spacing */
   .menu-item {
     padding: 1.5rem 0;
   }
@@ -597,20 +561,18 @@ nav a.active {
   .menu-item-text { font-size: 0.9rem; }
 }
 
-/* 3) Phones / narrow screens: up to 480px */
+
+
 @media (max-width: 480px) {
-  /* Header icons & logo smaller */
   .sticky-header {
     padding: 0.5rem;
   }
   .logo img { height: 2.5rem; }
   .icons a { font-size: 1rem; }
 
-  /* Hero text smaller */
   .hero-content h1 { font-size: 1.8rem; margin: 1rem 0; }
   .hero-content .subtitle { font-size: 0.9rem; }
 
-  /* Tabs: full width, stacked */
   .menu-navigation .tab {
     display: block;
     width: 100%;
@@ -618,17 +580,33 @@ nav a.active {
     text-align: center;
   }
 
-  /* Content padding tighter */
   .tab-content {
     padding: 1rem;
     margin-top: 0.5rem;
   }
 
-  /* Menu items: icon + text stack */
+
   .menu-item-text {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-}
 
+  .menu-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem auto;
+  }
+  .menu-navigation .tab {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .menu-section-container {
+    padding: 0 0.5rem;
+  }
+
+}
