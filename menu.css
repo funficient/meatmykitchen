@@ -866,20 +866,15 @@ footer .contact-item i {
     justify-content: center;
   }
 
-
-.footer-nav .footer-section-title {
-  margin-top: 3rem;
-}
-
-}
-
-
-@media (max-width: 991px) {
-  /* .contact-section, */
-  .footer-navigation-section,
-  .footer-courses-section {
-    width: 100%;
+  .footer-nav .footer-section-title {
+    margin-top: 3rem;
   }
+
+  .footer-bottom {
+  margin-top: 3rem;
+  
+}
+
 }
 
 @media (max-width: 640px) {
