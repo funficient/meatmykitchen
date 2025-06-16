@@ -1037,26 +1037,6 @@ footer .contact-item i {
   margin-top: 1rem;
 }
 
-  .contact-section {
-    padding: 50px 20px;
-    
-  }
-
-  .contact-content {
-    flex-direction: column;
-  }
-
-  .contact-details {
-    padding: 20px;
-  }
-
-  .contact-form-section {
-    padding: 50px 20px;
-  }
-
-  .form-row {
-    flex-direction: column;
-  }
 }
 
 /* Focus and Hover States */
@@ -1164,7 +1144,6 @@ footer .contact-item i {
 
 @media (max-width: 991px) {
 
-  .contact-section,
   .footer-navigation-section,
   .footer-courses-section {
     width: 100%;
