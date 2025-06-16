@@ -538,11 +538,10 @@ nav a.active {
     padding: 1.5rem;
   }
 
-
-
   .menu-section {
     width: 100%;
     padding: 1rem;
+    margin-top: 3rem;
   }
 
     .tab-content.selected, .menu-section-container {
@@ -566,13 +565,13 @@ nav a.active {
     padding: 1rem;
     
   }
-
-
-
- 
  
   .menu-bg {
     display: none;
+  }
+
+  .menu-section {
+    margin-top: 5rem;
   }
 
   .menu-item {
@@ -606,11 +605,14 @@ nav a.active {
     margin-top: 0.5rem;
   }
 
-
   .menu-item-text {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: flex-start;
     gap: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    width: 100%
   }
 
   .menu-navigation {
@@ -625,7 +627,11 @@ nav a.active {
     padding: 0.75rem;
     font-size: 1rem;
   }
-
+    .bread-icon {
+        flex-shrink: 0;        
+        /* width: 1.2rem;          */
+        margin-right: 0.5rem;  
+    }
 
 }
 

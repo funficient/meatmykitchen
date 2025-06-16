@@ -1339,11 +1339,11 @@ footer .contact-item i {
 }
 
 .item-4 {
-  background-image: url(assets/markets-burger.jpeg);
+  background-image: url(assets/food-salad.jpeg);
 }
 
 .item-5 {
-  background-image: url(assets/food-burger.jpeg);
+  background-image: url(assets/food-carousel-burgers.jpeg);
 }
 
 @media (max-width: 880px) {
@@ -1400,6 +1400,13 @@ footer .contact-item i {
   right: -40%;
   width: 30em;
 }
+/* .hero-graffiti-bg {
+  position: absolute;
+  z-index: 500;
+  top: -20%;
+  left: -40%;
+  width: 30em;
+} */
 
 /* Philosophy (Right Side) */
 
