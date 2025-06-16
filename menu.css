@@ -741,15 +741,6 @@ footer .contact-item i {
 
 @media screen and (max-width: 1280px) {
 	
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-  padding-bottom: 1.8rem;
-  }
-
 .footer-nav {
   display: flex;
   flex-direction: column;
@@ -775,26 +766,26 @@ footer .contact-item i {
   margin-top: 1rem;
 }
 
-  .contact-section {
+  /* .contact-section {
     padding: 50px 20px;
     
-  }
+  } */
 
-  .contact-content {
+  /* .contact-content {
     flex-direction: column;
-  }
+  } */
 
-  .contact-details {
+  /* .contact-details {
     padding: 20px;
-  }
+  } */
 
-  .contact-form-section {
+  /* .contact-form-section {
     padding: 50px 20px;
-  }
+  } */
 
-  .form-row {
+  /* .form-row {
     flex-direction: column;
-  }
+  } */
 }
 
 /* Focus and Hover States */
@@ -901,13 +892,7 @@ footer .contact-item i {
 }
 
 @media (max-width: 991px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 40px;
-    text-align: center;
-  }
-
-  .contact-section,
+  /* .contact-section, */
   .footer-navigation-section,
   .footer-courses-section {
     width: 100%;
