@@ -1256,9 +1256,15 @@ footer .contact-item i {
   width: 1140px;
 }
 
-.our-story h1 {
+.our-story h1,
+.bookings h1 {
   position: relative;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 3rem;
+  margin: 7rem 0 0 0;
+  border-radius: 1rem;
+  width: 100vw; 
 }
 
 .gallery-wrap {
