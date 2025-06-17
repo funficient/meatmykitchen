@@ -48,6 +48,7 @@ body {
     Helvetica,
     sans-serif;
   overflow-x: hidden;
+  
 }
 
 img, picture, video, canvas, svg {
@@ -86,6 +87,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: -2;
+  /* position: relative; */
 }
 
 body::before {
@@ -95,7 +97,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.4); 
+  background: rgba(0,0,0,0.5); 
   z-index: -1; 
   pointer-events: none; 
 }
