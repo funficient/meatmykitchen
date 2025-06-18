@@ -47,7 +47,7 @@ body {
     Helvetica,
     sans-serif;
   overflow-x: hidden;
-  
+  background: rgba(0,0,0,0.8); 
 }
 
 img, picture, video, canvas, svg {
