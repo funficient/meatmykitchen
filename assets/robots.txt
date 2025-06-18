@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://meatmykitchenfoodtrucks.co.za/sitemap.xml
